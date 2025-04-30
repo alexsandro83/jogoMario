@@ -1,56 +1,64 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.game-board{
+
+.game-board {
     width: 80%;
     height: 500px;
     border: 1px solid #333;
     margin: 0 auto;
     position: relative;
-    overflow:hidden
+    overflow: hidden;
 }
-.pipe{
+
+.pipe {
     position: absolute;
     bottom: 0;
     width: 80px;
-    right: 100%;
-    /*animation: pipe-animation 2s infinite linear;*/
+    left: 150px;
+    animation: pipe-animation 2s infinite linear;  
 }
-.mario{
+
+.mario { 
     width: 150px;
-    position:absolute;
+    position: absolute;
     bottom: 0;
-    animation: jump 500ms ease-out;
 }
+
 .jump {
     animation: jump 500ms ease-out;
 }
-    
 
-@keyframes pipe-animation{
-    from{
+@keyframes pipe-animation {
+    from {
         right: -80px;
     }
-    to{
-        right: 100%;
+
+    to {
+        right: 100%
     }
 }
+
 @keyframes jump {
-    0%{
+    0% {
         bottom: 0;
     }
-    40%{
+
+    40% {
         bottom: 180px;
     }
-    50%{
-        bottom: 180px;
-    } 
-    60%{
+
+    50% {
         bottom: 180px;
     }
-    100%{
-        background-origin: 0;
+
+    60% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: 0;
     }
 }
